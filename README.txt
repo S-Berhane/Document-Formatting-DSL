@@ -4,7 +4,7 @@ Intro
 *************************************************************************
 Author: Simon Berhane
 
-This is my project for Syntax-Based Tools and Compilers (CS4F03) at McMaster 
+This is my project for Syntax-Based Tools and Compilers (CS4TB3) at McMaster 
 University.
 
 It is a simple programming language that interprets 'data files' and 'design files'
