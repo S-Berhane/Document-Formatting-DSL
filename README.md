@@ -29,27 +29,27 @@ Each type has multiple key-value pairs.
 [2] The design document needs to represent the data by generating a template file. For example,
 
 <body>
-		<div data-id="personal-template">
-			<h1 data-type="name"></h1>
-			<li data-type="email"></li>
-			<li data-type="address"></li>
-			<li data-type="phone"></li>
-		</div>
-		<div>
-			<section data-id="education-template">
-			<h1 data-type="school"></h1>
-			<h5 data-type="degree"></h5>
-			<p data-type="startyear"></p>
-			</section>
-		</div>
-		
-		<div data-id="experience-template">
-			<div data-type="title"></div>
-			<div data-type="company"></div>
-		</div>
-		<div data-id="skills-template">
-			<p data-type="general"></p>
-		</div>
+	<div data-id="personal-template">
+		<h1 data-type="name"></h1>
+		<li data-type="email"></li>
+		<li data-type="address"></li>
+		<li data-type="phone"></li>
+	</div>
+	<div>
+		<section data-id="education-template">
+		<h1 data-type="school"></h1>
+		<h5 data-type="degree"></h5>
+		<p data-type="startyear"></p>
+		</section>
+	</div>
+	
+	<div data-id="experience-template">
+		<div data-type="title"></div>
+		<div data-type="company"></div>
+	</div>
+	<div data-id="skills-template">
+		<p data-type="general"></p>
+	</div>
 </body>
 
 Each type of information has a template, specified by a data-id attribute.
