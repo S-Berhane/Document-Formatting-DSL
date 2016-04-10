@@ -38,7 +38,7 @@ section represented in the design document. Each type has multiple key-value pai
 
 Creating Design Documents
 *****************************************************************************
-[2] The design document needs to represent the data by generating a template 
+[1] The design document needs to represent the data by generating a template 
 file. For example,
 
 <body>
@@ -64,9 +64,9 @@ file. For example,
 	</div>
 </body>
 
-Each type of information has a template, specified by a data-id attribute.
+[2] Each type of information has a template, specified by a data-id attribute.
 The template has a nested hierarchy for key-value pairs. Each pair is 
 specified by a data-type attribute.
 
-Once the program is executed, it will inject datafile information into the design 
+[3] Once the program is executed, it will inject datafile information into the design 
 as html characters (between beginning tag and ending tag).
