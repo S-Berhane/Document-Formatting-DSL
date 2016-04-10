@@ -1,0 +1,34 @@
+start experience 3
+title:Super Hero
+company:Justice League
+general:Improved team effectiveness by vaporizing villains.
+stop experience
+
+start experience 2
+title:Cool Guy
+company:Laid Back Industries
+general: Maintaining chill 
+stop experience
+
+start experience 1
+title:Software Developer
+company:Google
+general:I developed several key features on the Google Maps team.
+stop experience
+
+start personal
+name:Simon
+address:22Main St.
+email:s.berhane34@gmail.com
+general:I am a new grad student looking for interesting problems to tackle!I am a new grad student looking for interesting problems to tackle!I am a new grad student looking for interesting problems to tackle!I am a new grad student looking for interesting problems to tackle!
+stop personal
+
+start education
+degree:Mathematics and Computer Science
+school:McMaster University
+general: Attended hackathons, joined clubs such as DragonBoat and learned interesting concepts.
+stop education
+
+start skills
+general:Java rockstar
+stop skills
