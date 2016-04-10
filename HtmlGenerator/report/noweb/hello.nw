@@ -1,0 +1,137 @@
+\usepackage{graphicx}
+\section{Hello world}
+\includegraphics[scale=0.5]{ast.png}
+<<Resume.g4>>=
+grammar Resume;
+
+startrule	: expression+ ;	
+
+action		: START 
+			| STOP ;
+
+command 		: action texttype ;
+
+expression	: command NEWLINE
+			| body NEWLINE;
+
+texttype		: PERSONAL
+			| EXPERIENCE
+			| SKILLS
+			| EDUCATION ;
+
+body			: personal
+			| experience
+			| skills
+			| education ;
+
+personal		: pertype ':' VALUE ; 
+experience	: exptype ':' VALUE ;
+education	: edutype ':' VALUE ;
+skills		: skitype ':' VALUE ;
+
+pertype		: NAME
+			| ADDRESS
+			| PHONE
+			| EMAIL ;
+
+edutype		: DEGREE
+			| SCHOOL
+			| STARTYEAR
+			| ENDYEAR ;
+
+exptype		: TITLE
+			| COMPANY
+			| STARTYEAR
+			| ENDYEAR
+			| STARTMONTH
+			| ENDMONTH 
+			| SENTENCE;
+
+skitype		: GENERAL ;
+
+GENERAL		: 'general';
+TITLE		: 'title' ;
+COMPANY		: 'company' ;
+STARTMONTH	: 'startmonth' ;
+ENDMONTH		: 'endmonth' ;
+
+START		: 'start' ;
+STOP			: 'stop' ;
+
+NAME			: 'name' ;
+ADDRESS		: 'address' ;
+PHONE		: 'phone' ;
+EMAIL		: 'email' ;
+
+DEGREE		: 'degree' ;
+SCHOOL		: 'school' ;
+STARTYEAR	: 'startyear' ;
+ENDYEAR		: 'endyear' ;
+
+PERSONAL		: 'personal' ;
+SKILLS		: 'skills' ;
+EDUCATION	: 'education' ;
+EXPERIENCE	: 'experience' ;
+
+VALUE		: [a-zA-Z]+ ;
+
+NEWLINE		: '\r'? '\n' ;
+WS			: [ \t]+ -> skip ;
+
+@
+\noindent \ldots then I did the same in PHP.
+
+<<resume.html>>=
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head> 
+  <title>untitled</title> 
+  <meta http-equiv="content-type" content="text/html;charset=utf-8"> 
+ </head> 
+ <body> 
+  <div data-id="personal-template"> 
+   <h1 data-type="name"></h1> 
+   <li data-type="email">email</li> 
+   <li data-type="address">address</li> 
+   <li data-type="phone">phone</li> 
+  </div>
+  <div data-id="personal_1"> 
+   <h1 data-type="name">Simon</h1> 
+   <li data-type="email">abc@gmail.com</li> 
+   <li data-type="address">1280 Main St.</li> 
+   <li data-type="phone">9055259140</li> 
+  </div> 
+  <div data-id="education-template"> 
+   <p data-type="school">School</p> 
+   <p data-type="degree">Degree</p>  
+  </div>
+  <div data-id="education_0"> 
+   <p data-type="school">McMaster University</p> 
+   <p data-type="degree">Computer Science</p>  
+  </div> 
+  <div data-id="experience-template"> 
+   <div data-type="title">
+    Job Title
+   </div> 
+   <div data-type="company">
+    Employer
+   </div> 
+  </div>
+  <div data-id="experience_1"> 
+   <div data-type="title">
+     software developer
+   </div> 
+   <div data-type="company">
+     Microsoft
+   </div> 
+  </div> 
+  <div data-id="skills-template"> 
+   <p data-type="general">a skill</p> 
+  </div>
+  <div data-id="skills_1"> 
+   <p data-type="general">antlr</p> 
+  </div>   
+ </body>
+</html>
+@
+
