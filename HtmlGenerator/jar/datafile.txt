@@ -13,7 +13,7 @@ stop experience
 start personal
 name:Simon
 address:22Main St.
-email:s.berhane34@gmail.com
+email:gmail.com
 general:I am a new grad student looking for interesting problems to tackle!
 stop personal
 
