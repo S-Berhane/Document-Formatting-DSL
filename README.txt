@@ -1,4 +1,15 @@
-# Document-Formatting-DSL : Guide
+# Document-Formatting-DSL 
+
+Intro
+*************************************************************************
+Author: Simon Berhane
+
+This is my project for Syntax-Based Tools and Compilers (CS4F03) at McMaster University.
+
+It is a simple programming language that parses data from text files and injects them into HTML files.
+At the moment it only supports resume-style documents, and the syntax reflects this.
+
+Running
 *************************************************************************
 [1] Please ensure you have the jdk installed on your machine.
 
@@ -10,8 +21,8 @@ java -jar <datafile.txt> <designfile.html>
 and inserts into appropriate locations of the designfile. The output 
 is resume1.html. 
 
-Data Document
-
+Creating Data Documents
+***************************************************************************
 [1] The data document will take sequences that look like
 
 start <type> <order>
@@ -20,13 +31,15 @@ start <type> <order>
 ...
 stop <type> 
 
-The type can be personal, education, experience, or skils. 
-The order parameter is used for sorting. It takes an integer from 1-9, where 1
-will be the topmost data section represented in the design document.
+[2] The type can be personal, education, experience, or skils. The order parameter 
+is used for sorting. It takes an integer from 1-9, where 1 will be the topmost data 
+section represented in the design document. Each type has multiple key-value pairs. 
 
-Each type has multiple key-value pairs. 
 
-[2] The design document needs to represent the data by generating a template file. For example,
+Creating Design Documents
+*****************************************************************************
+[2] The design document needs to represent the data by generating a template 
+file. For example,
 
 <body>
 	<div data-id="personal-template">
@@ -42,7 +55,6 @@ Each type has multiple key-value pairs.
 		<p data-type="startyear"></p>
 		</section>
 	</div>
-	
 	<div data-id="experience-template">
 		<div data-type="title"></div>
 		<div data-type="company"></div>
