@@ -26,11 +26,12 @@ the abstract syntax tree. ANTLR4 generated code resides in ResumeParser.
 
 Running
 *************************************************************************
-[1] Please ensure you have the jdk installed on your machine.
+[1] Please ensure you have the jdk installed on your machine. Navigate to HTMLGenerator/jar
+to find the necessary jar and sample input files. 
 
 [2] To run, use the following command
 
-java -jar <datafile.txt> <designfile.html>
+java -jar dfdsl.jar <datafile.txt> <designfile.html>
 
 [3] The program will interpret both files. It parses through the data file
 and inserts into appropriate locations of the designfile. The output 
