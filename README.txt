@@ -47,7 +47,7 @@ start <type> <order>
 ...
 stop <type> 
 
-[2] The type can be personal, education, experience, or skils. The order parameter 
+[2] The type can be personal, education, experience, or skills. The order parameter 
 is used for sorting. It takes an integer from 1-9, where 1 will be the topmost data 
 section represented in the design document. Each type has multiple key-value pairs. 
 
